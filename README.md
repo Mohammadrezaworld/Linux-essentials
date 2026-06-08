@@ -33,6 +33,7 @@ To safely experiment with Linux, I used the following methods:
 * **Snapshotting:** The most critical habit—always "snapshot" your VM before making major configuration changes so you can revert if necessary.
 
 6. Quick Software Equivalents**
+
 | Task | Windows | Linux |
 | :--- | :--- | :--- |
 | **Office Suite** | MS Office | LibreOffice |
