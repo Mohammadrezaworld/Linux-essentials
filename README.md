@@ -72,3 +72,45 @@ This section documents the practical, real-world insights I've gathered beyond s
 * **Release Cycles:**
     * **Fixed Release:** Predictable, stable, better for business (e.g., Ubuntu/Debian)[span_15](start_span)[span_15](end_span).
     * **Rolling Release:** Continuous updates, always the latest features, requires more manual maintenance (e.g., Arch)[span_16](start_span)[span_16](end_span).
+
+
+**Linux Essentials - Key Concepts**
+Linux is technically just a Kernel—the core engine that manages CPU, RAM, and hardware. A full Operating System is the kernel paired with GNU tools and apps. Linux is open source, which means the source code is public and collaborative. The term "Free" here refers to freedom, not just price.
+**Distros & Desktop Environments**
+A distribution (Distro) packages the kernel with custom tools, a package manager, and a GUI. You can install multiple desktop environments (DEs) on one Linux system and switch between them.
+ * GNOME: Modern and clean (Ubuntu, Fedora).
+ * Cinnamon: Windows-like, great for beginners (Linux Mint).
+ * KDE Plasma: Highly customizable.
+ * XFCE: Very lightweight, perfect for older hardware (Kali Linux).
+**Managing Software**
+Distros use specific tools to install software:
+ * Debian/Ubuntu family: Uses .deb files and the APT command.
+ * Red Hat/Fedora/Rocky family: Uses .rpm files and the DNF command.
+**Release Cycles**
+ * Fixed Release: Predictable, stable versions (Ubuntu/Debian). Best for servers.
+ * Rolling Release: Continuous updates, always the latest features (Arch Linux). Needs more maintenance.
+**Lab Habits**
+ * Always take a VM snapshot before changing system configurations—it’s the best "undo" button.
+ * Always install VMware Tools/Guest Additions to fix display and time-sync issues.
+ * Get used to using the Tab key; it auto-completes filenames and saves a lot of time.
+**Exam Trivia**
+ * The login prompt you see in text mode is actually managed by an app called login.
+ * Monolithic kernels (Linux) perform all core tasks in a single process space, whereas Microkernels (Minix) run services in separate processes.
+ * FSF (Free Software Foundation) and OSI (Open Source Initiative) promote open-source licenses, but they have different goals regarding business adoption.
+**Standard Ports to Remember**
+ * FTP: 20, 21
+ * SSH: 22
+ * Telnet: 23
+ * SMTP: 25
+ * DNS: 53
+ * HTTP: 80
+ * HTTPS: 443
+ * IMAP: 143
+ * LDAP: 389
+**Software Equivalents**
+ * LibreOffice (MS Office replacement)
+ * Firefox (Browser)
+ * VLC (Media Player)
+ * GIMP (Photoshop replacement)
+ * Terminal (Bash/Zsh)
+
