@@ -114,3 +114,42 @@ Distros use specific tools to install software:
  * GIMP (Photoshop replacement)
  * Terminal (Bash/Zsh)
 
+
+### Linux Systems: Hardware, Networking & Management
+#### 1. Understanding Hardware (CPU, Motherboard, Power)
+ * CPU (Central Processing Unit): The brain of the system.
+   * Architecture: We generally categorize CPUs into x86 (32-bit) and x64 (64-bit). A 64-bit CPU can run both 32-bit and 64-bit software, but 32-bit hardware is limited to 32-bit applications.
+   * ARM Architecture: A RISC-based (Reduced Instruction Set Computing) architecture commonly used in mobile devices and embedded systems. Linux is highly portable and runs natively on ARM.
+ * Motherboard: Acts as the central nervous system, connecting all components (CPU, RAM, GPU) via a chipset.
+ * Power Supply (PSU): Converts AC (Alternating Current) from the wall to DC (Direct Current) for internal components. Proper wattage estimation is critical when building or upgrading servers.
+#### 2. Partitioning & Disk Management
+ * MBR (Master Boot Record): The legacy standard. It supports up to 4 Primary partitions and is limited to disks up to 2TB.
+ * GPT (GUID Partition Table): The modern standard. It supports up to 128 partitions and handles massive disk sizes (exabytes), making it the default for UEFI systems.
+ * Swap Space: A virtual memory partition on the disk that acts as an "overflow" area when physical RAM is exhausted.
+ * Tools:
+   * fdisk/cfdisk: Legacy CLI tools for MBR disks.
+   * GParted: The industry-standard GUI tool for partition management.
+   * gdisk/sgdisk: Modern CLI tools designed specifically for GPT disks.
+#### 3. Network Services & Ports (Exam Fundamentals)
+Linux servers rely on well-known ports to identify services. Common ports include:
+ * FTP: 20, 21 (File Transfer, plain-text/unencrypted).
+ * SSH: 22 (Secure Shell - encrypted remote management).
+ * Telnet: 23 (Unencrypted, insecure remote access - rarely used today).
+ * SMTP: 25 (Email delivery).
+ * DNS: 53 (Name resolution).
+ * HTTP/HTTPS: 80, 443 (Web traffic).
+ * IMAP: 143 (Email retrieval).
+ * Samba: 137–139 (File sharing between Windows/Linux).
+ * NFS: 2049 (Linux-native file sharing).
+#### 4. Software & Package Management
+ * Repositories (Repos): Centralized servers that store software packages. Distros use them to ensure system-wide updates.
+ * Dependencies: Linux applications often rely on shared libraries. Package managers (APT/DNF) automatically resolve these, meaning they install necessary "helper" files for you.
+ * Package Managers:
+   * Debian/Ubuntu: Uses .deb files with apt-get or dpkg (for offline local installs).
+   * Red Hat/Fedora: Uses .rpm files with yum or dnf.
+   * Snap: A distro-agnostic package format (popular in Ubuntu) designed for easy software distribution.
+#### 5. Pro-Tips for Real-World Linux
+ * The "Clear" Command: Use clear frequently in the terminal to maintain focus and avoid "command confusion".
+ * Tab Completion: Pressing Tab in the terminal auto-completes file paths and commands. It is the fastest way to avoid typos.
+ * Reverse Engineering: If you suspect an application is a repackaged open-source tool, always check the LICENSE or COPYING files in its source directory. Legal compliance with licenses (like GPL) is mandatory.
+ * GUI vs. CLI: While desktop environments like GNOME or KDE provide a user-friendly interface, deep system management is performed in the CLI. Professional Linux environments often run without a GUI to save resources and improve security.
